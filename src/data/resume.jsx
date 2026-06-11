@@ -40,7 +40,7 @@ export const resume = {
       name: "KrishiRokkha (HarvestGuard)",
       githubUrl: "https://github.com/fardina-tahsin/krishi-rokkha.git",       
       bullets: [
-        <>Developed a smart agriculture web app implemented AI based crop disease detection, real time weather risk assessment and crop batch management.</>,
+        <>Developed a smart agriculture web app featuring AI-based crop disease detection, real time weather risk assessment and crop batch management.</>,
         <>Built a responsive frontend using machine learning model <strong className="font-serif font-semibold text-gray-700">HTML, CSS, JavaScript, Vite</strong> and <strong className="font-serif font-semibold text-gray-700">Three.js</strong>.</>,
         <>Implemented <strong className="font-serif font-semibold text-gray-700">Firebase authentication, OpenWeatherMap, Roboflow</strong> and <strong className="font-serif font-semibold text-gray-700">HuggingFace APIs</strong> for secure access and intelligent decision support, integrated Bangla localization and voice-based interaction to improve usability for farmers.</>,
       ],
@@ -69,29 +69,34 @@ export const resume = {
   skills: [
     {
       category: "Programming Languages",
-      items: "C++ (Proficient), Python (Intermediate)",
+      items: "C++ (Proficient), Python (Intermediate), TypeScript (Basic)",
     },
     {
-      category: "Frontend Development",
-      items: "HTML, CSS, JavaScript (Intermediate), Flutter, Streamlit, React.js (Basic)",
+      category: "Frontend Frameworks & Libraries",
+      items: "React.js, Next.js, Flutter (Basic)",
+    },
+    {
+      category: "Web Technologies & Styling",
+      items: "HTML, CSS, JavaScript (Intermediate), Tailwind CSS, Streamlit (Basic)",
     },
     {
       category: "Backend Development",
-      items: "Firebase, PHP, Node.js (Basic)",
+      items: "Node.js, PHP, Firebase (Basic)",
     },
     {
       category: "Clouds & Databases",
-      items: "Firebase, MySQL, MongoDB, PostgreSQL (Basic)",
+      items: "MongoDB, MySQL, PostgreSQL (Basic)",
     },
     {
-      category: "Web Technologies & Tools",
+      category: "Tools & Environments",
       items: "Git, GitHub, Docker, VS Code, Jupyter Notebook (Basic)",
     },
     {
       category: "AI/ML",
-      items: "Basics of Artificial Intelligence, Machine Learning and Deep Learning",
+      items: "Basics of Artificial Intelligence, Machine Learning, and Deep Learning",
     },
   ],
+
 
   achievements: [
     {

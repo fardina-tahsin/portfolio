@@ -5,10 +5,10 @@ export default function Header({ contact, name }) {
     <div className="text-center mb-6 pt-1">
       {/* Name in small caps serif style */}
       <h1
-        className="font-heading font-normal mb-1"
+        className="font-heading font-normal mb-2"
         style={{
-          fontSize: '3rem',
-          letterSpacing: '0.07em',
+          fontSize: '2.5rem',
+          letterSpacing: '0.03em',
           fontVariant: 'small-caps',
           color: '#1a1a1a',
         }}
@@ -17,7 +17,7 @@ export default function Header({ contact, name }) {
       </h1>
 
       {/* Contact row */}
-      <div className="font-heading flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-gray-700">
+      <div className="font-heading flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-gray-800">
         <a href={`tel:${contact.phone}`} className="flex items-center gap-1 hover:text-purple-700 transition-colors">
           <Phone size={13} strokeWidth={1.8} />
           <span>{contact.phone}</span>
@@ -38,7 +38,7 @@ export default function Header({ contact, name }) {
           <span>Github</span>
         </a>
 
-        <span className="flex items-center gap-1 text-gray-600">
+        <span className="flex items-center gap-1 text-gray-800">
           <MapPin size={13} strokeWidth={1.8} />
           <span>{contact.location}</span>
         </span>

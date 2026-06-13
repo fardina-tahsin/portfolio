@@ -54,11 +54,12 @@ export default function App() {
           style={{
             width: '1120px',
             padding: '48px 56px',
-            fontFamily: "'Georgia', serif",
+            fontFamily: "'Georgia', 'Lora', serif",
           }}
         >
           <Header name={resume.name} contact={resume.contact} />
-          <hr className="border-t border-gray-300 mb-2" />
+          {/* Thin colored upper divider */}
+          <div className="border-t border-purple-300 mb-2"></div>
           <Education education={resume.education} />
           <Experience experience={resume.experience} />
           <Projects projects={resume.projects} />

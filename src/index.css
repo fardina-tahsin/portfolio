@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -10,16 +11,16 @@
 
   body {
     background-color: #f5f4f0;
-    font-family: 'Georgia', serif;
+    font-family: 'Georgia', 'Lora', serif;
     color: #1a1a1a;
   }
 }
 
 @layer components {
   .section-heading {
-    @apply text-base font-semibold uppercase tracking-wide mb-1;
+    @apply text-lg font-extrabold uppercase mb-1;
     color: #7B2D8B;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.06em;
   }
 
   .section-divider {

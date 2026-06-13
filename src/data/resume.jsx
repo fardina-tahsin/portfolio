@@ -50,7 +50,7 @@ export const resume = {
       githubUrl: "https://github.com/fardina-tahsin/JuiceBar-E-commerce-Website.git",     
       bullets: [
         <>Developed an e-commerce web application with user authentication, dynamic cart functionality and responsive UI.</>,
-        <>Built frontend interfaces <strong className="font-serif font-semibold text-gray-700">(HTML, CSS</strong> and <strong className="font-serif font-semibold text-gray-700">Javascript)</strong> for signup, product listing, cart management and navigation, enabling interactive and real time updates for users.</>,
+        <>Built frontend interfaces <strong className="font-serif font-bold text-gray-700">(HTML, CSS</strong> and <strong className="font-serif font-semibold text-gray-700">Javascript)</strong> for signup, product listing, cart management and navigation, enabling interactive and real time updates for users.</>,
         <>Handled backend data storage, server routing and form submission using <strong className="font-serif font-semibold text-gray-700">Node.js, Express.js</strong> and <strong className="font-serif font-semibold text-gray-700">MongoDB Altas</strong>.</>,
         <>Containerized the application using <strong className="font-serif font-semibold text-gray-700">Docker</strong> with optimized image builds and secure deployments.</>,
       ],

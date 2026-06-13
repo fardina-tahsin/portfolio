@@ -6,10 +6,9 @@ export default function Experience({ experience }) {
       {experience.map((exp, i) => (
         <div key={i} className="mb-3">
           <div className="flex justify-between items-baseline flex-wrap gap-1 mb-2">
-            <span className="font-semibold text-sm text-gray-900">{exp.title}</span>
-            <span className="font-semibold text-sm text-gray-600 shrink-0">{exp.period}</span>
+            <span className="font-serif font-bold text-[16px]/[20px] text-gray-950">{exp.title}</span>
+            <span className="font-serif font-bold text-sm text-gray-700 shrink-0">{exp.period}</span>
           </div>
-
           <div className="font-heading italic text-sm text-gray-700 mb-3">{exp.role}</div>
           <ul className="space-y-2 pl-4">
             {exp.bullets.map((d, j) => (

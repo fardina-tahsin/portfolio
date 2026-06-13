@@ -10,8 +10,8 @@ export default {
         accent: '#7B2D8B',
       },
       fontFamily: {
-        heading: ['"Bookman Old Style"', 'Bookman', 'Garamond', 'serif'],
-        serif: ['Georgia', 'serif'],
+        heading: ['"Bookman Old Style"', '"Libre Baskerville"', 'Bookman', 'Garamond', 'serif'],
+        serif: ['Georgia', 'Lora', 'serif'],
       },
     },
   },

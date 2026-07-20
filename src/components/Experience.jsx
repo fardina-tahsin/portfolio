@@ -1,67 +1,200 @@
-import Section from './Section'
+import { useState, useEffect, useRef } from 'react'
 
-export default function Experience({ experience }) {
-  return (
-    <Section title="Experience">
-      {experience.map((exp, i) => (
-        <div key={i} className="mb-3">
-          <div className="flex justify-between items-baseline flex-wrap gap-1 mb-2">
-            <span className="font-serif font-bold text-[16px]/[20px] text-gray-950">{exp.title}</span>
-            <span className="font-serif font-bold text-sm text-gray-700 shrink-0">{exp.period}</span>
-          </div>
-          <div className="font-heading italic text-sm text-gray-700 mb-3">{exp.role}</div>
-          <ul className="space-y-2 pl-4">
-            {exp.bullets.map((d, j) => (
-              <li key={j} className="font-heading text-sm text-gray-800 list-none flex gap-2">
-                <span className="text-gray-400 select-none">-</span>
-                <span>{d}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </Section>
-  )
+function useInView(threshold = 0.1) {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setInView(true) },
+      { threshold }
+    )
+    if (ref.current) obs.observe(ref.current)
+    return () => obs.disconnect()
+  }, [])
+  return [ref, inView]
 }
 
+export default function Experience({ experience }) {
+  const [ref, inView] = useInView(0.05)
+  const bulletColors = ['#69916a', '#ff5a79', '#846927']
 
-// import Section from './Section'
+  return (
+    <div className="w-full px-6 md:px-12 lg:px-20 py-24" ref={ref}>
+      {/* SECTION HEADER */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '64px',
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(10px)',
+        transition: 'opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s',
+      }}>
+        <h2 style={{
+          fontFamily: "'Share Tech Mono', monospace",
+          fontSize: '2.5rem',
+          fontWeight: 'bold',
+          letterSpacing: '0.15em',
+          color: '#EEDEC5',
+          backgroundColor: 'rgba(238, 222, 197, 0.08)',
+          padding: '4px 22px',
+          borderLeft: '3px solid #EEDEC5',
+          borderRight: '3px solid #EEDEC5',
+          borderRadius: '6px',
+          margin: 0,
+        }}>
+          EXPERIENCE
+        </h2>
+      </div>
 
-// export default function Experience({ experience }) {
-//   return (
-//     <Section title="Experience">
-//       {experience.map((exp, i) => (
-//         <div key={i} className="mb-4 last:mb-0 break-inside-avoid">
-//           {/* Top Line: Club/Company Name and Date Period */}
-//           <div className="flex justify-between items-baseline flex-wrap gap-x-4">
-//             <span className="font-medium text-sm text-gray-900" style={{ fontFamily: "Georgia, serif" }}>
-//               {exp.title}
-//             </span>
-//             <span className="text-xs text-gray-600 font-normal shrink-0">
-//               {exp.period}
-//             </span>
-//           </div>
+      <div style={{
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '64px',
+        opacity: inView ? 1 : 0,
+        transition: 'opacity 0.6s ease 0.2s',
+        maxWidth: '990px', 
+        margin: '0 auto',
+        width: '100%'
+      }}>
+        <div 
+          className="absolute top-4 bottom-4 left-8 md:left-1/2"
+          style={{
+            width: '2px',
+            borderLeft: '2px dashed #69916a', 
+            zIndex: 1,
+            transform: 'translateX(-50%)',
+          }} 
+        />
 
-//           {/* Sub-line: Role (Italicized) and Location (Right-aligned) */}
-//           <div className="flex justify-between items-baseline text-xs text-gray-700 italic mb-1.5">
-//             <span>{exp.role}</span>
-//             <span className="not-italic text-gray-500 font-normal text-[11px] uppercase tracking-wider">
-//               {exp.location}
-//             </span>
-//           </div>
+        {experience.map((exp, idx) => {
+          const accentColor = bulletColors[idx % bulletColors.length]
+          
+          return (
+            <div 
+              key={idx}
+              style={{
+                display: 'grid',
+                position: 'relative',
+                zIndex: 2,
+                paddingLeft: '70px',
+                transform: inView ? 'translateY(0)' : 'translateY(30px)',
+                transition: `all 0.6s cubic-bezier(0.25, 1, 0.5, 1) ${0.3 + idx * 0.15}s`,
+              }}
+              className="grid-cols-1 md:grid-cols-[1fr_1fr] md:gap-x-20 md:pl-0"
+            >
+              <div 
+                className="absolute top-1 left-8 md:left-1/2"
+                style={{
+                  width: '20px',
+                  height: '20px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(20, 30, 20, 0.98)',
+                  border: `2px dashed ${accentColor}`,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 10,
+                  transform: 'translateX(-50%)',
+                }}
+              >
+                <div style={{
+                  width: '8px',
+                  height: '8px',
+                  borderRadius: '50%',
+                  backgroundColor: accentColor,
+                }} />
+              </div>
 
-//           {/* Bullet Descriptions */}
-//           <ul className="space-y-1 pl-1">
-//             {exp.bullets.map((bullet, j) => (
-//               <li key={j} className="text-sm text-gray-800 flex gap-2.5 leading-relaxed">
-//                 {/* Clean inline bullet symbol */}
-//                 <span className="text-gray-400 select-none font-light">—</span>
-//                 <span>{bullet}</span>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//       ))}
-//     </Section>
-//   )
-// }
+              <div 
+                style={{
+                  textAlign: 'left',
+                  marginBottom: '10px',
+                }}
+                className="md:mb-0 md:pr-4"
+              >
+                <h3 style={{
+                  fontFamily: "'Share Tech Mono', monospace",
+                  fontSize: '1.6rem',
+                  fontWeight: 'bold',
+                  letterSpacing: '0.02em',
+                  color: '#EEDEC5',
+                  margin: 0,
+                  lineHeight: 1.2,
+                }}>
+                  {exp.title}
+                </h3>
+
+                <p style={{
+                  fontFamily: "'Share Tech Mono', monospace",
+                  fontSize: '1.6rem',
+                  color: 'rgba(238, 222, 197, 0.6)',
+                  letterSpacing: '0.04em',
+                  margin: '6px 0 0 0',
+                }}>
+                  {exp.period}
+                </p>
+              </div>
+
+              <div 
+                style={{ textAlign: 'left' }}
+                className="md:pl-4"
+              >
+                <h4 style={{
+                  fontFamily: "'Share Tech Mono', monospace",
+                  fontSize: '1.4rem',
+                  fontWeight: 'bold',
+                  letterSpacing: '0.02em',
+                  color: accentColor,
+                  margin: '0 0 12px 0',
+                  lineHeight: 1.2,
+                }}>
+                  {exp.role}
+                </h4>
+
+                <div 
+                  style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}
+                  className="md:items-start"
+                >
+                  {exp.bullets.map((b, j) => (
+                    <div 
+                      key={j} 
+                      style={{ 
+                        display: 'flex', 
+                        alignItems: 'flex-start', 
+                        gap: '8px',
+                        maxWidth: '540px',
+                      }}
+                    >
+                      <span style={{
+                        fontFamily: "'Share Tech Mono', monospace",
+                        fontSize: '0.6rem', 
+                        color: accentColor,
+                        marginTop: '2px', 
+                        flexShrink: 0,
+                      }}>
+                        *
+                      </span>
+                      <p style={{
+                        fontFamily: "'Share Tech Mono', monospace",
+                        fontSize: '0.7rem',
+                        color: 'rgba(238, 222, 197, 0.65)',
+                        letterSpacing: '0.02em',
+                        lineHeight: 1.6, 
+                        margin: 0,
+                      }}>
+                        {b}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          )
+        })}
+
+      </div>
+    </div>
+  )
+}

@@ -1,8 +1,18 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: #0D1A0E;
+  --bg-card-start: #1B3A1C;
+  --bg-card-end: #243F25;
+  --forest: #4D694E;
+  --forest-light: #69916a;
+  --cream: #EEDEC5;
+  --cream-muted: rgba(238,222,197,0.65);
+  --gold: #C9A84C;
+  --purple: #7B2D8B;
+}
 
 @layer base {
   * {
@@ -10,25 +20,31 @@
   }
 
   body {
-    background-color: #f5f4f0;
+    background-color: var(--bg-primary);
     font-family: 'Georgia', 'Lora', serif;
-    color: #1a1a1a;
+    color: var(--cream);
   }
 }
 
 @layer components {
   .section-heading {
     @apply text-lg font-extrabold uppercase mb-1;
-    color: #7B2D8B;
+    color: var(--forest);
     letter-spacing: 0.06em;
   }
 
   .section-divider {
-    @apply border-t border-purple-300 mb-4;
+    @apply border-t mb-4;
+    border-color: var(--forest);
   }
 
   .cv-link {
-    @apply underline decoration-purple-400 underline-offset-2 hover:text-purple-700 transition-colors;
-    color: #7B2D8B;
+    @apply underline underline-offset-2 transition-colors;
+    color: var(--forest);
+    text-decoration-color: var(--gold);
+  }
+
+  .cv-link:hover {
+    color: var(--gold);
   }
 }

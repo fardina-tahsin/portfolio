@@ -1,11 +1,10 @@
 export const resume = {
   name: "Fardina Tahsin",
   contact: {
-    phone: import.meta.env.VITE_PHONE,
-    email: import.meta.env.VITE_EMAIL,
-    linkedin: import.meta.env.VITE_LINKEDIN,
-    github: import.meta.env.VITE_GITHUB,
-    facebook: import.meta.env.VITE_FACEBOOK,
+    email: 'fardinatahsin@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/fardina-tahsin-09229b2a2/',
+    github: 'https://github.com/fardina-tahsin',
+    facebook: 'https://www.facebook.com/niha.tahsin',
   },
 
   education: [

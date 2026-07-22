@@ -335,7 +335,7 @@ export default function ProjectsSection({ projects, limit = 4 }) {
             to="/projects"
             style={{
               fontFamily: "'Share Tech Mono', monospace",
-              fontSize: '0.8rem',
+              fontSize: '0.2rem',
               letterSpacing: '0.35em',
               color: 'rgba(250, 142, 184, 0.95)', 
               fontWeight: 'bold',
@@ -344,7 +344,7 @@ export default function ProjectsSection({ projects, limit = 4 }) {
               alignItems: 'center',
               gap: '8px',
               border: '2px solid rgba(250, 142, 184, 0.95)', 
-              padding: '12px 32px',
+              padding: '4px 30px',
               backgroundColor: 'rgba(250, 142, 184, 0.2)', 
               borderRadius: '999px',
               boxShadow: '0 4px 20px rgba(13, 26, 14, 0.3)',

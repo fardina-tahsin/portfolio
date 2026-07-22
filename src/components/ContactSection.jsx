@@ -198,14 +198,14 @@ export default function ContactSection() {
                 onClick={submit}
                 style={{
                   fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '0.7rem',
+                  fontSize: '0.2rem',
                   letterSpacing: '0.35em',
                   color: 'rgba(250, 142, 184, 0.95)',
                   fontWeight: 'bold',
                   backgroundColor: 'rgba(250, 142, 184, 0.1)',
                   border: '2px solid rgba(250, 142, 184, 0.95)',
                   borderRadius: '999px',
-                  padding: '8px 22px',
+                  padding: '4px 18px',
                   alignSelf: 'flex-start',
                   cursor: 'pointer',
                   marginTop: '10px',

@@ -1,5 +1,5 @@
 import { resume } from '../data/resume'
-import { Linkedin, Facebook, Mail } from 'lucide-react'
+import { Linkedin, Facebook, Mail, Github } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -82,7 +82,7 @@ export default function Hero() {
             <div className="flex items-center gap-8">
                 {/* LinkedIn */}
                 <a 
-                  href={import.meta.env.VITE_LINKEDIN} 
+                  href={resume.contact.linkedin}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
@@ -93,7 +93,7 @@ export default function Hero() {
 
                 {/* Facebook */}
                 <a 
-                  href={import.meta.env.VITE_FACEBOOK} 
+                  href={resume.contact.facebook}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
@@ -104,11 +104,22 @@ export default function Hero() {
 
                 {/* Email */}
                 <a 
-                  href={import.meta.env.VITE_EMAIL}
+                  href={`mailto:${resume.contact.email}`}
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
                   aria-label="Email"
                 >
                   <Mail className="w-6 h-6 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
+                </a>
+
+                {/* GitHub */}
+                <a 
+                  href={resume.contact.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative transition-all duration-300 transform hover:-translate-y-1"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-6 h-6 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
                 </a>
             </div>
 

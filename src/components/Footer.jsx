@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Mail } from 'lucide-react'
+import { Facebook, Linkedin, Mail, Github } from 'lucide-react'
 import { resume } from '../data/resume'
 
 export default function Footer() {
@@ -57,6 +57,20 @@ export default function Footer() {
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
           <Linkedin size={24} />
+        </a>
+        <a
+          href={resume.contact.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ 
+            color: 'rgba(250, 142, 184, 0.95)', 
+            transition: 'color 0.3s ease, transform 0.3s ease', 
+            display: 'inline-flex' 
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.15)'}
+          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+        >
+          <Github size={24} />
         </a>
       </div>
       <p style={{

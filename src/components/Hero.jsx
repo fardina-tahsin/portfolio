@@ -14,7 +14,6 @@ export default function Hero() {
         scrollMarginTop: 90,
       }}
     >
-      {/* Overlay — lighter so background shows more */}
       <div
         className="absolute inset-0"
         style={{ 
@@ -22,15 +21,13 @@ export default function Hero() {
         }}
       />
 
-      {/* Main content row */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-10 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
-        {/* LEFT */}
         <div className="flex-1">
           <p
-            className="mb-5 text-xs tracking-[0.3em] uppercase"
+            className="mb-5 text-sm tracking-[0.3em] uppercase"
             style={{ 
-              fontFamily: "'Share Tech Mono', monospace", 
+              fontFamily: "Consolas, monospace", 
               color: 'rgba(250, 142, 184, 0.65)' ,
               fontWeight: 'bold'
             }}
@@ -41,8 +38,8 @@ export default function Hero() {
           <h1
             className="uppercase leading-[1.05] mb-2"
             style={{
-              fontFamily: "'Share Tech Mono', monospace",
-              fontSize: 'clamp(3rem, 9vw, 7rem)',
+              fontFamily: "Consolas, monospace",
+              fontSize: 'clamp(3rem, 9vw, 6rem)',
               color: '#EEDEC5',
               letterSpacing: '0.04em',
               textShadow: '0 4px 30px rgba(0,0,0,0.5)',
@@ -55,8 +52,8 @@ export default function Hero() {
             <h1
               className="uppercase leading-none"
               style={{
-                fontFamily: "'Share Tech Mono', monospace",
-                fontSize: 'clamp(3rem, 9vw, 7rem)',
+                fontFamily: "Consolas, monospace",
+                fontSize: 'clamp(3rem, 9vw, 6rem)',
                 color: '#69916a',
                 letterSpacing: '0.04em',
                 textShadow: '0 4px 30px rgba(0,0,0,0.4)',
@@ -67,9 +64,9 @@ export default function Hero() {
           </div>
 
           <p
-            className="mb-10 text-sm leading-[1.9] max-w-md"
+            className="mb-8 text-sm leading-[1.9] max-w-md"
             style={{
-              fontFamily: "'Share Tech Mono', monospace",
+              fontFamily: "Consolas, monospace",
               color: '#EEDEC5',
               opacity: 0.75,
             }}
@@ -88,7 +85,7 @@ export default function Hero() {
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-6 h-6 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
+                  <Linkedin className="w-5 h-5 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
                 </a>
 
                 {/* Facebook */}
@@ -99,7 +96,7 @@ export default function Hero() {
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-6 h-6 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
+                  <Facebook className="w-5 h-5 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
                 </a>
 
                 {/* Email */}
@@ -108,7 +105,7 @@ export default function Hero() {
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
                   aria-label="Email"
                 >
-                  <Mail className="w-6 h-6 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
+                  <Mail className="w-5 h-5 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
                 </a>
 
                 {/* GitHub */}
@@ -119,15 +116,15 @@ export default function Hero() {
                   className="group relative transition-all duration-300 transform hover:-translate-y-1"
                   aria-label="GitHub"
                 >
-                  <Github className="w-6 h-6 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
+                  <Github className="w-5 h-5 stroke-[#fa8eb8] group-hover:stroke-[#69916a] transition-colors duration-300" strokeWidth={2} />
                 </a>
             </div>
 
             <button
               onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm tracking-widest transition-all hover:opacity-60 hover:tracking-[0.25em]"
+              className="text-base tracking-widest transition-all hover:opacity-60 hover:tracking-[0.25em]"
               style={{
-                fontFamily: "'Share Tech Mono', monospace",
+                fontFamily: "Consolas, monospace",
                 color: '#EEDEC5',
                 borderBottom: '1px solid #fa8eb8',
                 paddingBottom: '4px',

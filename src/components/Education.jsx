@@ -31,8 +31,8 @@ export default function Education({ education }) {
         transition: 'opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s',
       }}>
         <h2 style={{
-          fontFamily: "'Share Tech Mono', monospace",
-          fontSize: '2.5rem',
+          fontFamily: "Consolas, monospace",
+          fontSize: '1.8rem',
           fontWeight: 'bold',
           letterSpacing: '0.15em',
           color: '#EEDEC5',
@@ -116,8 +116,8 @@ export default function Education({ education }) {
                 className="md:mb-0 md:pr-4"
               >
                 <h3 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '1.6rem',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '1.3rem',
                   fontWeight: 'bold',
                   letterSpacing: '0.02em',
                   color: '#EEDEC5',
@@ -128,8 +128,8 @@ export default function Education({ education }) {
                 </h3>
 
                 <p style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '1.6rem',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '1rem',
                   color: 'rgba(238, 222, 197, 0.6)',
                   letterSpacing: '0.04em',
                   margin: '6px 0 0 0',
@@ -144,8 +144,8 @@ export default function Education({ education }) {
                 className="md:pl-4"
               >
                 <h4 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '1.4rem',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '1.1rem',
                   fontWeight: 'bold',
                   letterSpacing: '0.02em',
                   color: accentColor, 
@@ -170,8 +170,8 @@ export default function Education({ education }) {
                       }}
                     >
                       <span style={{
-                        fontFamily: "'Share Tech Mono', monospace",
-                        fontSize: '0.6rem', 
+                        fontFamily: "Consolas, monospace",
+                        fontSize: '0.9rem', 
                         color: accentColor,
                         marginTop: '2px', 
                         flexShrink: 0,
@@ -179,8 +179,8 @@ export default function Education({ education }) {
                         *
                       </span>
                       <p style={{
-                        fontFamily: "'Share Tech Mono', monospace",
-                        fontSize: '0.7rem',
+                        fontFamily: "Consolas, monospace",
+                        fontSize: '0.9rem',
                         color: 'rgba(238, 222, 197, 0.65)',
                         letterSpacing: '0.02em',
                         lineHeight: 1.6,

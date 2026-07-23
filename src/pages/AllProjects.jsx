@@ -19,6 +19,12 @@ function useInView(threshold = 0.1) {
 
 export default function AllProjects() {
   const [ref, inView] = useInView(0.05)
+  const [selectedCategory, setSelectedCategory] = useState('All')
+
+  const categories = ['All', ...new Set(resume.projects.map(p => p.category))]
+  const filtered = selectedCategory === 'All'
+    ? resume.projects
+    : resume.projects.filter(p => p.category === selectedCategory)
 
   return (
     <main style={{ backgroundColor: '#0D1A0E', minHeight: '100vh' }}>
@@ -28,7 +34,7 @@ export default function AllProjects() {
         <div ref={ref} style={{
           display: 'flex',
           alignItems: 'center',
-          marginBottom: '48px',
+          marginBottom: '32px',
           opacity: inView ? 1 : 0,
           transition: 'opacity 0.5s ease 0.1s',
         }}>
@@ -38,8 +44,8 @@ export default function AllProjects() {
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              width: '56px', 
-              height: '56px',
+              width: '52px', 
+              height: '52px',
               borderRadius: '50%',
               backgroundColor: 'rgba(255,255,255,0.07)',
               border: '1px solid rgba(238,222,197,0.32)',
@@ -80,22 +86,65 @@ export default function AllProjects() {
           </Link>
 
           <h2 style={{
-            fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '2.2rem', 
-            letterSpacing: '0.18em',
+            fontFamily: "Consolas, monospace",
+            fontSize: '2rem', 
+            letterSpacing: '0.15em',
             color: '#EEDEC5', 
-            lineHeight: 1.3,
+            lineHeight: 1.2,
             flex: 1, 
             textAlign: 'center', 
             margin: 0,
+            fontWeight: 'bold',
           }}>
             ALL PROJECTS
           </h2>
         </div>
 
+        {/* Category filter */}
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '10px',
+          justifyContent: 'center',
+          marginBottom: '40px',
+        }}>
+          {categories.map(cat => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              style={{
+                fontFamily: "Consolas, monospace",
+                fontSize: '1rem',
+                letterSpacing: '0.1em',
+                padding: '4px 16px',
+                borderRadius: '999px',
+                border: `1px solid ${selectedCategory === cat ? '#69916a' : 'rgba(238,222,197,0.3)'}`,
+                backgroundColor: selectedCategory === cat ? 'rgba(105,145,106,0.2)' : 'transparent',
+                color: selectedCategory === cat ? '#69916a' : 'rgba(238,222,197,0.6)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                if (selectedCategory !== cat) {
+                  e.currentTarget.style.color = '#69916a'
+                  e.currentTarget.style.borderColor = 'rgba(105,145,106,0.7)'
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedCategory !== cat) {
+                  e.currentTarget.style.color = 'rgba(238,222,197,0.6)'
+                  e.currentTarget.style.borderColor = 'rgba(238,222,197,0.3)'
+                }
+              }}
+            >
+              {cat.toUpperCase()}
+            </button>
+          ))}
+        </div>
+
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {resume.projects.map((project, idx) => (
+          {filtered.map((project, idx) => (
             <ProjectCard 
               key={idx} 
               project={project} 

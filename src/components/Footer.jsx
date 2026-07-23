@@ -28,7 +28,7 @@ export default function Footer() {
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.15)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          <Mail size={24} />
+          <Mail size={20} />
         </a>
         <a
           href={resume.contact.facebook}
@@ -42,7 +42,7 @@ export default function Footer() {
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.15)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          <Facebook size={24} />
+          <Facebook size={20} />
         </a>
         <a
           href={resume.contact.linkedin}
@@ -56,7 +56,7 @@ export default function Footer() {
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.15)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          <Linkedin size={24} />
+          <Linkedin size={20} />
         </a>
         <a
           href={resume.contact.github}
@@ -70,12 +70,12 @@ export default function Footer() {
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.15)'}
           onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
         >
-          <Github size={24} />
+          <Github size={20} />
         </a>
       </div>
       <p style={{
-        fontFamily: "'Share Tech Mono', monospace",
-        fontSize: '0.65rem',
+        fontFamily: "Consolas, monospace",
+        fontSize: '0.9rem',
         letterSpacing: '0.08em',
         color: 'rgba(250, 142, 184, 0.75)',
         margin: 0,

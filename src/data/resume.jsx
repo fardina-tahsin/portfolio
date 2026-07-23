@@ -43,7 +43,7 @@ export const resume = {
     {
       name: "KrishiRokkha",
       image: "/projects/KrishiRokkha.png",  
-      category: "Web Application",
+      category: "Full Stack",
       techStack: ["HTML", "CSS", "JavaScript", "Three.js", "Firebase", "OpenWeatherMap", "Roboflow", "HuggingFace"],
       description: "A smart agriculture web app featuring AI-based crop disease detection, real-time weather risk assessment and crop batch management with Bangla localization.",
       githubUrl: "https://github.com/fardina-tahsin/krishi-rokkha",
@@ -68,7 +68,7 @@ export const resume = {
     {
       name: "Fund Management",
       image: "/projects/FundManagement.png", 
-      category: "Frontend",
+      category: "ERP Development",
       techStack: ["Odoo", "Python", "PostgreSQL", "Docker"],
       description: "A comprehensive fund management system with fund allocation, requisition and bill control, approval workflows, inter-project transfers and real-time balance tracking with double-spending prevention.",
       githubUrl: "https://github.com/fardina-tahsin/Fund-management",     
@@ -76,7 +76,7 @@ export const resume = {
     {
       name: "Credit Card Fraud Detection",
       image: "/projects/CreditCard.png", 
-      category: "Machine Learning",
+      category: "AI/ML",
       techStack: ["Python", "scikit-learn", "Streamlit", "Pandas"],
       description: "An ML model for detecting fraudulent credit card transactions using preprocessing, class imbalance handling techniques and a web-based interface for instant prediction.",
       githubUrl: "https://github.com/fardina-tahsin/ML-project--Credit-Card-Fraud",     
@@ -84,18 +84,10 @@ export const resume = {
     {
       name: "Automated Report Generator",
       image: "/projects/AutoReport.png", 
-      category: "Machine Learning",
+      category: "Automation",
       techStack: ["Python", "Streamlit", "Watchdog", "Pandas", "Matplotlib", "FPDF/ReportLab"],
       description: "An automation system that processes CSV/Excel files, performs data preprocessing and analysis, generates visual insights and produces PDF reports through both an interactive interface and folder-based automation.",
       githubUrl: "https://github.com/fardina-tahsin/report-generator",     
-    },
-    {
-      name: "Moonlight Cards Game",
-      image: "/projects/CardGame.png", 
-      category: "Frontend",
-      techStack: ["Python", "PyQt5", "Object Oriented Programming"],
-      description: "A modern Blackjack (21) desktop game featuring a casino-inspired experience with a betting system, player statistics and smooth gameplay.",
-      githubUrl: "https://github.com/fardina-tahsin/Moonlight-Cards-Game",     
     },
     {
       name: "ToDo App",
@@ -104,6 +96,14 @@ export const resume = {
       techStack: ["React", "Bootstrap", "JavaScript"],
       description: "A beautifully designed Todo List application with CRUD functionality, a soft pastel-inspired interface and a clean, minimal experience optimized for simplicity and ease of use.",
       githubUrl: "https://github.com/fardina-tahsin/ToDo-application",     
+    },
+    {
+      name: "Moonlight Cards Game",
+      image: "/projects/CardGame.png", 
+      category: "Desktop App",
+      techStack: ["Python", "PyQt5", "Object Oriented Programming"],
+      description: "A modern Blackjack (21) desktop game featuring a casino-inspired experience with a betting system, player statistics and smooth gameplay.",
+      githubUrl: "https://github.com/fardina-tahsin/Moonlight-Cards-Game",     
     },
     {
       name: "Word Guess Game",
@@ -116,7 +116,7 @@ export const resume = {
     {
       name: "SecureVault",
       image: "/projects/SecureVault.jpeg", 
-      category: "Frontend",
+      category: "Cybersecurity",
       techStack: ["Python", "Pyperclip", "CustomTkinter", "Fernet encryption"],
       description: "A password manager which evolved from a terminal-based script into a modern Graphical User Interface (GUI) application.",
       githubUrl: "https://github.com/fardina-tahsin/password-manager",     
@@ -124,7 +124,7 @@ export const resume = {
     {
       name: "Breast Cancer Classification",
       image: "/projects/Cancer.png", 
-      category: "Deep Learning",
+      category: "AI/ML",
       techStack: ["Artificial Neural Network", "Jupyter Notebook"],
       description: "This project accurately classify breast cancer tumors as Malignant or Benign.",
       githubUrl: "https://github.com/fardina-tahsin/ANN-project---Breast-cancer-classification",     

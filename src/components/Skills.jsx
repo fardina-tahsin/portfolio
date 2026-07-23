@@ -44,8 +44,8 @@ export default function Skills({ number }) {
           transition: 'opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s',
         }}>
           <h2 style={{
-            fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '2.5rem',
+            fontFamily: "Consolas, monospace",
+            fontSize: '1.8rem',
             letterSpacing: '0.15em',
             fontWeight: 'bold',
             color: '#4D694E',

@@ -53,8 +53,8 @@ export default function SkillCard({ category, number, emoji, skills, delay }) {
         <span
           className="mb-3 block transition-all duration-300"
           style={{
-            fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '0.85rem',
+            fontFamily: "Consolas, monospace",
+            fontSize: '1.2rem',
             color: '#69916a',
             letterSpacing: '0.1em',
             transform: hovered ? 'scale(1.1)' : 'scale(1)',
@@ -98,25 +98,32 @@ export default function SkillCard({ category, number, emoji, skills, delay }) {
       >
         {/* title */}
         <div className="flex items-center gap-2">
-          <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: '0.7rem', color: '#EEDEC5', fontWeight: 'bold', letterSpacing: '0.18em' }}>
+          <span style={{ 
+            fontFamily: "Consolas, monospace", 
+            fontSize: '1.2rem', 
+            color: '#EEDEC5', 
+            fontWeight: 'bold', 
+            letterSpacing: '0.14em' 
+          }}>
             {category.toUpperCase()}
           </span>
         </div>
 
         {/* tags */}
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {skills.map((s, i) => (
             <span
               key={i}
-              className="rounded-full px-2 py-0.5"
+              className="rounded-full px-3 py-1"
               style={{
-                fontFamily: "'Share Tech Mono', monospace",
-                fontSize: '0.56rem',
+                fontFamily: "Consolas, monospace",
+                fontSize: '1rem',
                 letterSpacing: '0.06em',
                 color: hovered ? '#EEDEC5' : 'rgba(238,222,197,0.8)',
                 backgroundColor: hovered ? 'rgba(77,105,78,0.25)' : 'rgba(77,105,78,0.1)',
                 border: '1px solid rgba(238,222,197,0.35)',
                 transition: `all 0.2s ease ${i * 30}ms`,
+                marginBottom: '2px',
               }}
             >
               {s.name}

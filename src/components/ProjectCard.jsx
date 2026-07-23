@@ -90,8 +90,8 @@ export default function ProjectCard({ project, idx, inView }) {
           gap: '6px',
         }}>
           <h3 style={{
-              fontFamily: "'Share Tech Mono', monospace",
-              fontSize: '1.5rem', 
+              fontFamily: "Consolas, monospace",
+              fontSize: '1.2rem', 
               fontWeight: 'bold',
               letterSpacing: '0.02em',
               color: 'rgba(13, 26, 14, 0.85)', 
@@ -101,13 +101,13 @@ export default function ProjectCard({ project, idx, inView }) {
           </h3>
 
           <span style={{
-            fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '0.5rem',
+            fontFamily: "Consolas, monospace",
+            fontSize: '0.9rem',
             color: 'rgba(238,222,197,0.9)',
             backgroundColor: 'rgba(13,26,14,0.7)',
             border: '1px solid rgba(28, 51, 29, 0.1)',
             borderRadius: '999px',
-            padding: '2px 12px',
+            padding: '2px 10px',
             letterSpacing: '0.06em',
           }}>
             {project.category}
@@ -123,8 +123,8 @@ export default function ProjectCard({ project, idx, inView }) {
           }}>
           {project.techStack.map((tech, i) => (
             <span key={i} style={{
-              fontFamily: "'Share Tech Mono', monospace",
-              fontSize: '0.5rem', 
+              fontFamily: "Consolas, monospace",
+              fontSize: '0.9rem', 
               letterSpacing: '0.02em',
               color: 'rgba(28, 51, 29, 0.9)', 
               fontWeight: 'bold',
@@ -144,8 +144,8 @@ export default function ProjectCard({ project, idx, inView }) {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '0.65rem',
+            fontFamily: "Consolas, monospace",
+            fontSize: '0.9rem',
             letterSpacing: '0.08em',
             textDecoration: 'none',
             display: 'inline-flex',
@@ -170,7 +170,7 @@ export default function ProjectCard({ project, idx, inView }) {
             e.currentTarget.querySelector('.arrow').style.transform = 'translateX(0px)'
           }}
         >
-          <Github size={22} style={{ marginRight: '4px', flexShrink: 0 }} />
+          <Github size={16} style={{ marginRight: '4px', flexShrink: 0 }} />
           <span>EXPLORE SOURCE</span>
           <span className="arrow" style={{
             marginLeft: '4px',
@@ -195,8 +195,8 @@ export default function ProjectCard({ project, idx, inView }) {
                 left: '-12px',
                 right: '-12px',
                 zIndex: 100, 
-                fontFamily: "'Share Tech Mono', monospace",
-                fontSize: '0.6rem',
+                fontFamily: "Consolas, monospace",
+                fontSize: '0.9rem',
                 color: 'rgba(13, 26, 14, 0.85)',
                 letterSpacing: '0.02em',
                 lineHeight: 1.5,

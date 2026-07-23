@@ -33,8 +33,8 @@ export default function ProjectsSection({ projects, limit = 4 }) {
       }}>
 
         <h2 style={{
-          fontFamily: "'Share Tech Mono', monospace",
-          fontSize: '2.5rem',
+          fontFamily: "Consolas, monospace",
+          fontSize: '1.8rem',
           fontWeight: 'bold',
           letterSpacing: '0.18em',
           color: '#EEDEC5',
@@ -150,8 +150,10 @@ export default function ProjectsSection({ projects, limit = 4 }) {
                           }} />
                           <div style={{
                             position: 'absolute',
-                            bottom: '25%', left: '25%',
-                            width: '8px', height: '8px',
+                            bottom: '25%', 
+                            left: '25%',
+                            width: '8px', 
+                            height: '8px',
                             borderRadius: '50%',
                             backgroundColor: '#69916a',
                             opacity: 0.3,
@@ -171,8 +173,8 @@ export default function ProjectsSection({ projects, limit = 4 }) {
                 gap: '8px'
               }}>
                 <h3 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '1.7rem',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '1.2rem',
                   fontWeight: 'bold',
                   letterSpacing: '0.02em',
                   color: 'rgba(13, 26, 14, 0.85)',
@@ -182,13 +184,13 @@ export default function ProjectsSection({ projects, limit = 4 }) {
                 </h3>
 
                 <span style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '0.5rem',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '0.9rem',
                   color: 'rgba(238,222,197,0.9)',
                   backgroundColor: 'rgba(13,26,14,0.7)',
                   border: '1px solid rgba(28, 51, 29, 0.1)',
                   borderRadius: '999px',
-                  padding: '3px 14px',
+                  padding: '2px 10px',
                   letterSpacing: '0.06em',
                   whiteSpace: 'nowrap',
                 }}>
@@ -198,8 +200,8 @@ export default function ProjectsSection({ projects, limit = 4 }) {
 
               {/* Description */}
               <p style={{
-                fontFamily: "'Share Tech Mono', monospace",
-                fontSize: '0.68rem',
+                fontFamily: "Consolas, monospace",
+                fontSize: '0.9rem',
                 color: 'rgba(13, 26, 14, 0.75)',
                 letterSpacing: '0.04em',
                 lineHeight: 1.7,
@@ -217,8 +219,8 @@ export default function ProjectsSection({ projects, limit = 4 }) {
               }}>
                 {project.techStack.map((tech, i) => (
                   <span key={i} style={{
-                    fontFamily: "'Share Tech Mono', monospace",
-                    fontSize: '0.5rem',
+                    fontFamily: "Consolas, monospace",
+                    fontSize: '0.9rem',
                     letterSpacing: '0.02em',
                     color: 'rgba(28, 51, 29, 0.9)',
                     fontWeight: 'bold',
@@ -238,9 +240,9 @@ export default function ProjectsSection({ projects, limit = 4 }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.16em',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '0.9rem',
+                  letterSpacing: '0.15em',
                   color: '#846927',
                   fontWeight: 'bold',
                   textDecoration: 'none',
@@ -262,7 +264,7 @@ export default function ProjectsSection({ projects, limit = 4 }) {
                   e.currentTarget.querySelector('.arrow').style.transform = 'translateX(0px)'
                 }}
               >
-                <Github size={22} style={{ flexShrink: 0 }} />
+                <Github size={16} style={{ flexShrink: 0 }} />
                 <span>EXPLORE SOURCE</span>
                 <span className="arrow" style={{
                   marginLeft: '2px',
@@ -334,9 +336,9 @@ export default function ProjectsSection({ projects, limit = 4 }) {
           <Link
             to="/projects"
             style={{
-              fontFamily: "'Share Tech Mono', monospace",
-              fontSize: '0.2rem',
-              letterSpacing: '0.35em',
+              fontFamily: "Consolas, monospace",
+              fontSize: '0.8rem',
+              letterSpacing: '0.3em',
               color: 'rgba(250, 142, 184, 0.95)', 
               fontWeight: 'bold',
               textDecoration: 'none',
@@ -344,7 +346,7 @@ export default function ProjectsSection({ projects, limit = 4 }) {
               alignItems: 'center',
               gap: '8px',
               border: '2px solid rgba(250, 142, 184, 0.95)', 
-              padding: '4px 30px',
+              padding: '4px 22px',
               backgroundColor: 'rgba(250, 142, 184, 0.2)', 
               borderRadius: '999px',
               boxShadow: '0 4px 20px rgba(13, 26, 14, 0.3)',

@@ -66,8 +66,8 @@ export default function ContactSection() {
           transition: 'opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s',
         }}>         
           <p style={{
-            fontFamily: "'Share Tech Mono', monospace",
-            fontSize: '2.5rem',
+            fontFamily: "Consolas, monospace",
+            fontSize: '1.5rem',
             color: '#EEDEC5',
             letterSpacing: '0.12em',
             alignSelf: 'flex-start',
@@ -121,7 +121,7 @@ export default function ContactSection() {
             <style>{`
               .contact-input::placeholder {
                 color: rgba(250, 142, 184, 0.5);
-                font-family: 'Share Tech Mono', monospace;
+                font-family: Consolas, monospace;
                 font-size: 0.7rem;
                 letter-spacing: 0.08em;
               }
@@ -142,7 +142,7 @@ export default function ContactSection() {
                 onChange={handle}
                 className="contact-input"
                 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
+                  fontFamily: "Consolas, monospace",
                   fontSize: '0.7rem',
                   letterSpacing: '0.06em',
                   color: 'rgba(250, 142, 184, 0.95)',
@@ -161,7 +161,7 @@ export default function ContactSection() {
                 onChange={handle}
                 className="contact-input"
                 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
+                  fontFamily: "Consolas, monospace",
                   fontSize: '0.7rem',
                   letterSpacing: '0.06em',
                   color: 'rgba(250, 142, 184, 0.95)',
@@ -181,7 +181,7 @@ export default function ContactSection() {
                 onChange={handle}
                 className="contact-input"
                 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
+                  fontFamily: "Consolas, monospace",
                   fontSize: '0.7rem',
                   letterSpacing: '0.06em',
                   color: 'rgba(250, 142, 184, 0.95)',
@@ -197,9 +197,9 @@ export default function ContactSection() {
               <button
                 onClick={submit}
                 style={{
-                  fontFamily: "'Share Tech Mono', monospace",
-                  fontSize: '0.2rem',
-                  letterSpacing: '0.35em',
+                  fontFamily: "Consolas, monospace",
+                  fontSize: '0.6rem',
+                  letterSpacing: '0.3em',
                   color: 'rgba(250, 142, 184, 0.95)',
                   fontWeight: 'bold',
                   backgroundColor: 'rgba(250, 142, 184, 0.1)',
